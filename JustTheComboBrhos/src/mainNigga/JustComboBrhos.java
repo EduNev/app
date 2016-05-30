@@ -213,10 +213,10 @@ public class JustComboBrhos extends JFrame {
 		
         String url = "jdbc:oracle:thin:@localhost:1521:XE";
         try {
-			conexion = DriverManager.getConnection(url, "system", "1234");
+			conexion = DriverManager.getConnection(url, "Usuario/system", "Tu contraseña");
         //Consulta de la tabla
 			Statement stat = conexion.createStatement();
-			ResultSet rslt =  stat.executeQuery("SELECT NOM_SUBFAMILIA FROM MATERIALESAPP.SUBFAMILIA WHERE FAMILIA_COD_FAMILIA = (SELECT COD_FAMILIA FROM MATERIALESAPP.FAMILIA WHERE NOM_FAMILIA = '" + family + "')");								
+			ResultSet rslt =  stat.executeQuery("SELECT NOM_SUBFAMILIA FROM SUBFAMILIA WHERE FAMILIA_COD_FAMILIA = (SELECT COD_FAMILIA FROM FAMILIA WHERE NOM_FAMILIA = '" + family + "')");								
 		
 		
 			
