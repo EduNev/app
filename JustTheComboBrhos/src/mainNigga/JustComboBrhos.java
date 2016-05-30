@@ -137,7 +137,7 @@ public class JustComboBrhos extends JFrame {
         // Conexion a la base de datos
         String url = "jdbc:oracle:thin:@localhost:1521:XE";
         try {
-			conexion = DriverManager.getConnection(url, "system", "1234");
+			conexion = DriverManager.getConnection(url, "usuario/system", "TU CONTRASEÑA");
         //Consulta de la tabla
 			Statement stat = (Statement) conexion.createStatement();
 			ResultSet rslt =  ((java.sql.Statement) stat).executeQuery("SELECT NOM_FAMILIA, NOM_SUBFAMILIA FROM FAMILIA, SUBFAMILIA WHERE COD_FAMILIA = FAMILIA_COD_FAMILIA");								
